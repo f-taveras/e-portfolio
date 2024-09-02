@@ -1,4 +1,4 @@
-"use client"
+1"use client"
 
 import {Sheet, SheetContent, SheetTrigger} from "/ui/sheet";
 import { usePathname } from "next/navigation";
@@ -38,7 +38,8 @@ const MobileNav = () => {
         <SheetTrigger className="flex justify-center items-center">
             <CiMenuFries className="text-[35px] text-accent " />
         </SheetTrigger>
-        <SheetContent>
+        <SheetContent className="flex flex-col ">
+            <div>logo</div>
             content
         </SheetContent>
     </Sheet>
