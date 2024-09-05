@@ -19,7 +19,7 @@ const about = {
         },
         {
             fieldName: "Experience",
-            fieldValue: "Junior Developer"
+            fieldValue: "Junior"
         },
         {
             fieldName: "Freelance",
