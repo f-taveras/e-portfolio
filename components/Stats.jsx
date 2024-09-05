@@ -3,22 +3,22 @@ import CountUp from "react-countup";
 
 const stats = [
     {
-        number: 10,
+        number: 6,
         text: 'Technologies learned'
     },
     {
-        number: 100,
+        number: 10,
         text: 'Projects completed'
     },
     {
-        number: 1000,
+        number: 14,
         text: 'Cups of coffee'
     }
 ];
 
 const Stats = () => {
     return (
-        <section>
+        <section className="pt-4 pb-12 xl:pt-0 xl:pb-0" >
             <div className="container mx-auto">
                 <div className="flex flex-wrap gap-6 max-w-[80vm] mx-auto xl:max-w-none">
 
@@ -33,6 +33,9 @@ const Stats = () => {
                                     delay={2}
                                     className="text-4xl xl:text-6xl font-extrabold"
                                 />
+                                <p className={`${item.text.length < 15 ? "max-w-[100px]" : "max-w-[150px]"
+                                    } leading-snug text-white/80`} >
+                                    {item.text}</p>
                             </div>
                         )
                     })}
