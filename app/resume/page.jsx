@@ -1,13 +1,13 @@
 'use client';
 
-import { FaHtml5, FaCss3, FaJs, FaNodeJs } from 'react-icons/fa';
+import { FaHtml5, FaCss3, FaJs, FaNodeJs, FaPython, FaLinux } from 'react-icons/fa';
 import { SiTailwindcss, SiNextdotjs } from 'react-icons/si';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../../components/ui/tabs';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../../components/ui/tooltip';
 
 const about = {
     title: 'About Me',
-    description: 'I am a full stack developer with a focus on front end development. I have experience with React, Next.js, Node.js, and TailwindCSS. I am passionate about creating beautiful, responsive, and accessible web applications. I am currently seeking a full-time position as a front end developer.',
+    description: 'I am a full-stack developer with a focus on Python. I have experience with React, Next.js, Node.js, and TailwindCSS. I am passionate about creating beautiful, responsive, and accessible web applications. I am currently seeking a full-time position as a Python end developer.',
     info: [
         {
             fieldName: "Name",
@@ -43,40 +43,27 @@ const experience = {
     description: 'I have experience with React, Next.js, Node.js, and TailwindCSS. I am passionate about creating beautiful, responsive, and accessible web applications.',
     items: [
         {
-            company: 'Company Name',
-            position: "position",
+            company: 'Ultimate Technologies Group',
+            position: "AV/IT Specialist",
             duration: '2021 - Present',
         },
         {
-            company: 'Company Name',
-            position: "position",
-            duration: '2021 - Present',
+            company: 'Indeed',
+            position: "AV Coordinator",
+            duration: '2019-2022',
         },
         {
-            company: 'Company Name',
-            position: "position",
-            duration: '2021 - Present',
+            company: 'Bronx Community College',
+            position: "A/V Associate",
+            duration: '2017-2019',
         },
         {
-            company: 'Company Name',
-            position: "position",
-            duration: '2021 - Present',
+            company: 'TAVERN',
+            position: "JR Programmer Intern",
+            duration: '2024 - Present',
         },
-        {
-            company: 'Company Name',
-            position: "position",
-            duration: '2021 - Present',
-        },
-        {
-            company: 'Company Name',
-            position: "position",
-            duration: '2021 - Present',
-        },
-        {
-            company: 'Company Name',
-            position: "position",
-            duration: '2021 - Present',
-        },
+       
+        
     ]
 }
 
@@ -84,22 +71,22 @@ const experience = {
 const education = {
     icon: '/assets/resume/cap.svg',
     title: 'Education',
-    description: 'I have experience with React, Next.js, Node.js, and TailwindCSS. I am passionate about creating beautiful, responsive, and accessible web applications.',
+    description: 'My education has provided me with a solid foundation in software development and technology, giving me the skills and knowledge needed to solve problems and adapt to new challenges in the industry.',
     items: [
         {
-            institution: 'institution Name',
-            degree: "position",
-            duration: '2021 - Present',
+            institution: 'Code Fellows',
+            degree: "Advanced Software Development in Full-Stack JavaScript",
+            duration: '2024',
         },
         {
-            institution: 'institution Name',
-            degree: "position",
-            duration: '2021 - Present',
+            institution: 'Bronx Community College',
+            degree: "Associates in Media & Film Production",
+            duration: '2018',
         },
         {
-            institution: 'institution Name',
-            degree: "position",
-            duration: '2021 - Present',
+            institution: 'John Jay Community College',
+            degree: "Computer science",
+            duration: '2019',
         },
 
     ]
@@ -107,8 +94,12 @@ const education = {
 
 const skills = {
     title: "Skills",
-    description: "I have experience with React, Next.js, Node.js, and TailwindCSS. I am passionate about creating beautiful, responsive, and accessible web applications.",
+    description: "Proficient in a variety of programming languages and technologies, I bring a strong skill set in web development, software design, and problem-solving. With experience in both front-end and back-end development, I am capable of building responsive, dynamic applications and solutions tailored to meet specific needs.",
     skillList: [
+        {
+            icon: <FaPython />,
+            name: "Python"
+        },
         {
             icon: <FaHtml5 />,
             name: "HTML"
@@ -132,7 +123,12 @@ const skills = {
         {
             icon: <SiNextdotjs />,
             name: "Next.js"
-        }
+        },
+        {
+            icon: <FaLinux />,
+            name: "Linux"
+        },
+
     ]
 }
 
@@ -214,7 +210,7 @@ const Resume = () => {
                                                     <h3 className='text-xl max-w-[260px] min-h-[60px] text-center lg:text-left' >{item.institution}</h3>
                                                     <div className='flex items-center gap-3'>
                                                         <span className='w-[6px] rounded-full bg-accent'></span>
-                                                        <p className='text-white/60'>{item.company}</p>
+                                                        <p className='text-white/60'>{item.degree}</p>
                                                     </div>
 
                                                 </li>)
