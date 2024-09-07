@@ -1,17 +1,18 @@
-'use client'
+'use client';
+
 import CountUp from "react-countup";
 
 const stats = [
     {
-        number: 6,
+        number: 10,
         text: 'Technologies learned'
     },
     {
-        number: 10,
+        number: 6,
         text: 'Projects completed'
     },
     {
-        number: 14,
+        number: 56,
         text: 'Cups of coffee'
     }
 ];

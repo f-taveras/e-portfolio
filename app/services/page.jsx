@@ -16,9 +16,9 @@ const services = [
     },
     {
         num: '02',
-        title: 'service here',
-        description: 'We build websites that serve as powerful marketing tools and bring memorable brand experiences.',
-        href: ""
+        title: 'Tutorials',
+        description: 'Learn a new skill or improve your knowledge with our tutorials. Challenge yourself and show off to others',
+        href: "/tutorials"
     },
     {
         num: '03',
