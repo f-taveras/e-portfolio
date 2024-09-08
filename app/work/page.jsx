@@ -19,13 +19,13 @@ import WorkSliderBtns from "../../components/WorkSliderBtns"
 const projects = [
     {
         num: '01',
-        category: 'Web Development',
-        title: 'Project 1',
-        description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui.',
+        category: 'Classic Snake Game',
+        title: 'Snake Game',
+        description: 'A simple classic snake game where players control a growing snake, guiding it to eat food while avoiding walls and its own tail. The snake speeds up as it eats more, and the goal is to survive as long as possible while achieving a high score.',
         stack: [{ name: "Html 5" }, { name: "Javascript" }, { name: "Css 3" }],
-        image: '/assets/work/project_image_default.png',
-        live: 'github.com',
-        github: '',
+        image: '/assets/work/project_image_1.png',
+        live: 'https://f-taveras.github.io/ClassicSnakeGame',
+        github: 'https://github.com/f-taveras/ClassicSnakeGame',
     },
     {
         num: '02',
@@ -76,7 +76,7 @@ const Work = () => {
         const currentIndex = swiper.activeIndex;
         setProject(projects[currentIndex]);
 
-        
+
     }
 
 
@@ -84,7 +84,7 @@ const Work = () => {
     return (
         <motion.section
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1, transition:{delay: 2.4, duration: 0.4, ease: "easeIn" }}}
+            animate={{ opacity: 1, transition: { delay: 2.4, duration: 0.4, ease: "easeIn" } }}
             className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
         >
             <div className="container mx-auto">
@@ -109,7 +109,7 @@ const Work = () => {
                             <div className="flex items-center gap-4">
 
                                 {/* live project button  */}
-                                <Link href={project.live}>
+                                <Link href={project.live} target="_blank" >
                                     <TooltipProvider delayDuration={100}>
                                         <Tooltip>
                                             <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group ">
@@ -125,7 +125,7 @@ const Work = () => {
 
                                 {/* github project button  */}
 
-                                <Link href={project.github}>
+                                <Link href={project.github} target="_blank" >
                                     <TooltipProvider delayDuration={100}>
                                         <Tooltip>
                                             <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group ">
@@ -162,20 +162,19 @@ const Work = () => {
                                             <div className="relative w-full h-full">
                                                 <Image
                                                     src={project.image}
-                                                    fill
-                                                    className="object-cover"
+                                                    layout="fill" // Ensures the image covers the parent element
+                                                    objectFit="cover" // This keeps the aspect ratio intact
                                                     alt='project image'
-
                                                 />
                                             </div>
                                         </div>
                                     </SwiperSlide>
-                                    )
+                                )
                             })}
 
-                            <WorkSliderBtns 
-                            containerStyles="flex gap=2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
-                            btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
+                            <WorkSliderBtns
+                                containerStyles="flex gap=2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
+                                btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
                             />
                         </Swiper>
                     </div>
