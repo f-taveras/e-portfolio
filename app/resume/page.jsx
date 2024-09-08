@@ -1,6 +1,6 @@
 'use client';
 
-import { FaHtml5, FaCss3, FaJs, FaNodeJs, FaPython, FaLinux } from 'react-icons/fa';
+import { FaHtml5, FaCss3, FaJs, FaNodeJs, FaPython, FaLinux, FaMicrosoft } from 'react-icons/fa';
 import { SiTailwindcss, SiNextdotjs } from 'react-icons/si';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../../components/ui/tabs';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../../components/ui/tooltip';
@@ -40,7 +40,7 @@ const about = {
 const experience = {
     icon: '/assets/resume/badge.svg',
     title: 'Experience',
-    description: 'I have experience with React, Next.js, Node.js, and TailwindCSS. I am passionate about creating beautiful, responsive, and accessible web applications.',
+    description: 'I have experience with React, Next.js, Django, Python3 and TailwindCSS. I am passionate about creating beautiful, responsive, and accessible web applications.',
     items: [
         {
             company: 'Ultimate Technologies Group',
@@ -58,9 +58,9 @@ const experience = {
             duration: '2017-2019',
         },
         {
-            company: 'TAVERN',
-            position: "JR Programmer Intern",
-            duration: '2024 - Present',
+            company: 'US Army',
+            position: "92-S",
+            duration: '2018 - Present',
         },
        
         
@@ -128,6 +128,11 @@ const skills = {
             icon: <FaLinux />,
             name: "Linux"
         },
+        {
+            icon: <FaMicrosoft />,
+            name: "Microsoft"
+        },
+        
 
     ]
 }
@@ -268,7 +273,7 @@ const Resume = () => {
                                         return (
                                             <li
                                                 key={index}
-                                                className='flex items-center justify-center xl:justify-start gap-4'
+                                                className='flex items-center xl:justify-start gap-4'
                                             >
 
                                                 <span className='text-white/60'>{item.fieldName}</span>

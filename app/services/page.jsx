@@ -11,7 +11,7 @@ const services = [
     {
         num: '01',
         title: 'Web Development',
-        description: 'We build websites that serve as powerful marketing tools and bring memorable brand experiences.',
+        description: 'Get help building websites that serve as powerful marketing tools and bring memorable brand experiences.',
         href: ""
     },
     {
@@ -22,8 +22,8 @@ const services = [
     },
     {
         num: '03',
-        title: 'service here',
-        description: 'We build websites that serve as powerful marketing tools and bring memorable brand experiences.',
+        title: 'Software Development',
+        description: 'Software solutions using Python, JavaScript, and C#. Experienced in building scalable applications, automating processes, and integrating APIs. ',
         href: ""
     }
 ]
