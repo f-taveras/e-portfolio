@@ -223,7 +223,7 @@ const Tutorials = () => {
                         <Swiper
                             spaceBetween={30}
                             slidesPerView={1}
-                            className="xl:h-[520px] mb-12"
+                            className="xl:h-[520px] xl:w-[520px] mb-12"
                             onSlideChange={handleSlideChange}
                         >
                             {projects.map((project, index) => {
@@ -241,6 +241,7 @@ const Tutorials = () => {
                                                     fill
                                                     className="object-cover"
                                                     alt='project image'
+                                                    priority={index === 0 }
 
                                                 />
                                             </div>
