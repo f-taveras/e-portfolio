@@ -67,18 +67,7 @@ const Tutorials = () => {
                 
             }
         </div>
-    //     <div>
-    //     {currentTutorial ? (
-    //         <div>
-    //             <h2>{currentTutorial.title}</h2>
-    //             <p>{currentTutorial.description}</p>
-    //             <p><strong>Difficulty:</strong> {currentTutorial.difficulty}</p>
-    //             <p><strong>Stack:</strong> {currentTutorial.stack}</p>
-    //         </div>
-    //     ) : (
-    //         <p>Loading...</p>
-    //     )}
-    // </div>
+ 
 );
 };
 export default Tutorials;
