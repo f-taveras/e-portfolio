@@ -1,6 +1,6 @@
 "use client"
 
-
+import TutorialDetail from "./[id]"
 import { motion } from "framer-motion"
 // import React, { useState } from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
@@ -45,17 +45,16 @@ const Tutorials = () => {
 
     return (
        
-        <div>
-            <h1>Tutorial List</h1>
+        <div className="flex flex-col items-center">
+            <h1 className="text-xl mb-8">Tutorial List</h1>
             {data.length > 0 ? (
 
-                <ul>
+                <ul className="lg:min-w-[160vh] xl:min-w-[160vh] ">
                     {data.map((tutorial, index) => (
                         <li key={index}>
                             <Link href={`/tutorials/${tutorial.id}`}>
                                 <li>
-
-                                    {tutorial.title}
+                                    {tutorial.number}.{tutorial.title} - {tutorial.difficulty}
                                 </li>
                             </Link>
                         </li>
