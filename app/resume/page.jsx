@@ -1,7 +1,7 @@
 'use client';
 
 import { FaHtml5, FaCss3, FaJs, FaNodeJs, FaPython, FaLinux, FaMicrosoft } from 'react-icons/fa';
-import { SiTailwindcss, SiNextdotjs } from 'react-icons/si';
+import { SiTailwindcss, SiNextdotjs, SiDjango, SiApache } from 'react-icons/si';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../../components/ui/tabs';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../../components/ui/tooltip';
 
@@ -131,6 +131,14 @@ const skills = {
         {
             icon: <FaMicrosoft />,
             name: "Microsoft"
+        },
+        {
+            icon: <SiDjango />,
+            name: "Django"
+        },
+        {
+            icon: <SiApache />,
+            name: "Apache"
         },
         
 

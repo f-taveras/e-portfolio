@@ -23,7 +23,7 @@ const services = [
     {
         num: '03',
         title: 'Software Development',
-        description: 'Software solutions using Python, JavaScript, and C#. Experienced in building scalable applications, automating processes, and integrating APIs. ',
+        description: 'Software solutions using Python and JavaScript. Experienced in building scalable applications, automating processes, and integrating APIs. ',
         href: ""
     }
 ]
