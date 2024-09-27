@@ -1,12 +1,16 @@
 'use client'
+
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 
+import { Button } from '../../../components/ui/button';
 
-const TutorialDetail = ({params}) => {
+const TutorialDetail = ({ params }) => {
     console.log(params)
     const { id } = params;
     const [tutorial, setTutorial] = useState(null);
     const [loading, setLoading] = useState(true);
+    const router = useRouter();
 
     useEffect(() => {
         if (id) {
@@ -19,7 +23,7 @@ const TutorialDetail = ({params}) => {
                 } catch (error) {
                     console.error('Error fetching tutorial', error);
                 } finally {
-                    setLoading(false);  
+                    setLoading(false);
                 }
             };
             fetchTutorial();
@@ -36,8 +40,17 @@ const TutorialDetail = ({params}) => {
 
     return (
         <div className='container'>
-            <h1 className='text-2xl mb-8'>{tutorial.title}</h1>
-            <p className='text-white/60'>{tutorial.description}</p>
+            <Button
+                onClick={() => router.back()} 
+                className='mb-8'
+            >
+                Go Back
+            </Button>
+            <div className='container'>
+                <h1 className='text-2xl mb-8'>{tutorial.title}</h1>
+                <p className='text-white/60'>{tutorial.description}</p>
+            </div>
+
         </div>
     );
 };
