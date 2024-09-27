@@ -13,7 +13,7 @@ const TutorialDetail = ({params}) => {
             const fetchTutorial = async () => {
                 setLoading(true);  // Set loading to true when fetching starts
                 try {
-                    const response = await fetch(`http://localhost:8000/tutorials/${id}`);
+                    const response = await fetch(`http://localhost:8000/tutorials/${id}/`);
                     const data = await response.json();
                     setTutorial(data);
                 } catch (error) {
@@ -35,9 +35,9 @@ const TutorialDetail = ({params}) => {
     }
 
     return (
-        <div>
-            <h1>{tutorial.title}</h1>
-            <p>{tutorial.description}</p>
+        <div className='container'>
+            <h1 className='text-2xl mb-8'>{tutorial.title}</h1>
+            <p className='text-white/60'>{tutorial.description}</p>
         </div>
     );
 };
