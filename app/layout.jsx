@@ -1,6 +1,5 @@
 import { JetBrains_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react"
-// import Backend from "./tutorials/backend";
 import "./globals.css";
 
 // components
