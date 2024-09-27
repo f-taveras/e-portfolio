@@ -11,7 +11,6 @@ const Tutorials = () => {
     const [data, setData] = useState([]);
 
  
-
     useEffect(() => {
         const fetchLinks = async () => {
             try {

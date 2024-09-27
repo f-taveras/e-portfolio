@@ -15,7 +15,7 @@ const TutorialDetail = ({ params }) => {
     const [tutorial, setTutorial] = useState(null);
     const [loading, setLoading] = useState(true);
     const router = useRouter();
-    const [ codeEditor, setCodeEditor] = useState();
+    const [codeEditor, setCodeEditor] = useState();
 
     const handleCodeEditorChange = (value) => {
         setCodeEditor(value);
@@ -49,33 +49,33 @@ const TutorialDetail = ({ params }) => {
     }
 
     return (
-        <div className='container flex flex-col xl:flex-row items-center '>
+        <div className='container flex flex-col xl:flex-row'>
             <div>
 
-            <Button
-                onClick={() => router.back()}
-                className='mb-8'
+                <Button
+                    onClick={() => router.back()}
+                    className='mb-8'
                 >
-                Go Back
-            </Button>
-            <div className='container'>
-                <h1 className='text-2xl mb-8'>{tutorial.title}</h1>
-                <p className='text-white/60 mb-8'>{tutorial.description}</p>
-                <h1>{codeEditor}</h1>
+                    Go Back
+                </Button>
+                <div className='container'>
+                    <h1 className='text-2xl mb-8'>{tutorial.title}</h1>
+                    <p className='text-white/60 mb-8'>{tutorial.description}</p>
+                    {/* <h1>{codeEditor}</h1> */}                                 {/* data from code editor */}
                 </div>
-                </div>
-                <AceEditor
-                    mode="python"           // Set Python as the language
-                    theme="monokai"         // Choose a theme, e.g., "monokai"
-                    onChange={handleCodeEditorChange}
-                    name="python-code-editor"
-                    editorProps={{ $blockScrolling: true }}
-                    height="500px"
-                    width="80%"
-                    fontSize={16}
-                    showPrintMargin={false}
-                    className=""
-                />
+            </div>
+            <AceEditor
+                mode="python"           // Set Python as the language
+                theme="monokai"         // Choose a theme, e.g., "monokai"
+                onChange={handleCodeEditorChange}
+                name="python-code-editor"
+                editorProps={{ $blockScrolling: true }}
+                height="500px"
+                width="80%"
+                fontSize={16}
+                showPrintMargin={false}
+                className="border"
+            />
 
         </div>
     );
