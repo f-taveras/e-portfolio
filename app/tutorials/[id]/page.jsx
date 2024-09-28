@@ -27,7 +27,7 @@ const TutorialDetail = ({ params }) => {
             const fetchTutorial = async () => {
                 setLoading(true);  // Set loading to true when fetching starts
                 try {
-                    const response = await fetch(`http://localhost:8000/tutorials/${id}/`);
+                    const response = await fetch(`${process.env.NEXT_PUBLIC_TUTORIAL_API}${id}/`);
                     const data = await response.json();
                     setTutorial(data);
                 } catch (error) {

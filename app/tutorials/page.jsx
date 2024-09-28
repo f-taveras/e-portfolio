@@ -1,6 +1,7 @@
 "use client"
 
 
+
 import Link from "next/link";
 
 
@@ -14,7 +15,7 @@ const Tutorials = () => {
     useEffect(() => {
         const fetchLinks = async () => {
             try {
-                const response = await fetch('http://localhost:8000/tutorials/');
+                const response = await fetch(`${process.env.NEXT_PUBLIC_TUTORIAL_API}`);
                 const data = await response.json();
                 setData(data);
                 console.log(data)
