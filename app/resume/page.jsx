@@ -7,7 +7,7 @@ import SkillCarousel from '../../components/SkillCarousel';
 
 const about = {
     title: 'About Me',
-    description: 'I am a full-stack developer with a focus on Python. I have experience with React, Next.js, Node.js, and TailwindCSS. I am passionate about creating beautiful, responsive, and accessible web applications. I am currently seeking a full-time position as a Python end developer.',
+    description: 'I am a full-stack developer with a focus on Python. I have experience with React, Next.js, Node.js, and TailwindCSS. I am passionate about creating beautiful, responsive, and accessible web applications. I am currently seeking a full-time position as a Full-Stack developer.',
     info: [
         {
             fieldName: "Name",
