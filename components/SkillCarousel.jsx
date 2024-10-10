@@ -6,8 +6,6 @@ import "slick-carousel/slick/slick.css";
 import { FaHtml5, FaCss3, FaJs, FaNodeJs, FaPython, FaLinux, FaMicrosoft } from 'react-icons/fa';
 import { SiTailwindcss, SiNextdotjs, SiDjango, SiApache, SiMeta, SiOpenai} from 'react-icons/si';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from './ui/tooltip';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
-
 
 const skills = {
     title: "Skills",
@@ -65,62 +63,45 @@ const skills = {
             icon: <SiOpenai />,
             name: "ChatGPT"
         },
-        
-
     ]
 }
 
 const SkillCarousel = () => {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
     speed: 2000,
     autoplaySpeed: 2000,
     cssEase: "linear"
   };
+
   return (
     <div className="slider-container">
+      <h3 className='text-4xl font-bold text-center mb-8'>{skills.title}</h3>
+      <p className='max-w-[600px] text-white/60 mx-auto text-center mb-12'>{skills.description}</p>
       <Slider {...settings}>
-      <TabsContent value="skills" className='w-full h-full'>
-<div className="flex flex-col gap-[30px]">
-
-    <div className='flex flex-col gap-[30px] text-center xl:text-left'>
-
-        <h3 className='text-4xl font-bold'>{skills.title}</h3>
-        <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>{skills.description}</p>
-    </div>
-
-    <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]'>
-        {skills.skillList.map((skill, index) => {
-            return <li key={index}>
-
-                <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                        <TooltipTrigger className='w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group gap-4 xl:gap-[30px]'>
-                            <div className='text-6xl group-hover:text-accent transition-all duration-300'> {skill.icon}</div>
-                        </TooltipTrigger>
-                        <TooltipContent>
-                            <p className='capitalize'>{skill.name}</p>
-                        </TooltipContent>
-
-                    </Tooltip>
-
-                </TooltipProvider>
-            </li>
-        })}
-    </ul>
-</div>
-
-</TabsContent>
-
+        {skills.skillList.map((skill, index) => (
+          <div key={index} className='p-4'>
+            <TooltipProvider delayDuration={100}>
+              <Tooltip>
+                <TooltipTrigger className='w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group gap-4 xl:gap-[30px]'>
+                  <div className='text-6xl group-hover:text-accent transition-all duration-300'>
+                    {skill.icon}
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p className='capitalize'>{skill.name}</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+          </div>
+        ))}
       </Slider>
     </div>
   );
 }
 
 export default SkillCarousel;
-
-

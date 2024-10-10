@@ -33,7 +33,7 @@ const Photo = () => {
                     }}
                     className='w-[298px] h-[298px] xl:w-full xl:h-full absolute rounded-full overflow-hidden mix-blend-lighten'>
                     
-                    <Image src="/assets/profile_toon.png" priority quality={100} fill alt='profile pic' className='object-contain overflow-hidden' />
+                    <Image src="/assets/profile_toon.png" priority quality={100} fill alt='profile pic' className='object-contain overflow-hidden img-shadow' />
                 </motion.div>
 
                 {/* Cirecle */}

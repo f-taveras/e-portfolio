@@ -1,8 +1,9 @@
 'use client';
 
-
+import { ScrollArea } from '../../components/ui/scroll-area';
+import { motion } from 'framer-motion';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../../components/ui/tabs';
-import  SkillCarousel  from '../../components/SkillCarousel';
+import SkillCarousel from '../../components/SkillCarousel';
 
 const about = {
     title: 'About Me',
@@ -61,8 +62,8 @@ const experience = {
             position: "92-S",
             duration: '2018 - Present',
         },
-       
-        
+
+
     ]
 }
 
@@ -83,19 +84,13 @@ const education = {
             duration: '2018',
         },
         {
-            institution: 'John Jay Community College',
+            institution: 'John Jay College of Criminal Justice',
             degree: "Computer science",
             duration: '2019',
         },
 
     ]
 }
-
-
-
-
-import { ScrollArea } from '../../components/ui/scroll-area';
-import { motion } from 'framer-motion';
 
 
 const Resume = () => {
@@ -124,6 +119,9 @@ const Resume = () => {
 
                     </TabsList>
                     <div className='min-h-[70vh] w-full'>
+
+                        {/* Experience section */}
+
                         <TabsContent value="experience" className='w-full'>
                             <div className='flex flex-col gap-[30px] text-center xl:text-left'>
                                 <h3 className='text-4xl font-bold' >{experience.title}</h3>
@@ -153,6 +151,8 @@ const Resume = () => {
                                 </ScrollArea>
                             </div>
                         </TabsContent>
+
+                        {/* Education section */}
 
                         <TabsContent value="education" className='w-full'>
                             <div className='flex flex-col gap-[30px] text-center xl:text-left'>
@@ -184,11 +184,13 @@ const Resume = () => {
                             </div>
                         </TabsContent>
 
-                                    <SkillCarousel />
+                        {/* Skills section */}
 
+                        <TabsContent value='skills'>
+                            <SkillCarousel />
+                        </TabsContent>
 
-
-
+                        {/* About section */}
 
                         <TabsContent value="about" className='w-full text-center xl:text-left'>
                             <div className='flex flex-col gap-[30px]'>

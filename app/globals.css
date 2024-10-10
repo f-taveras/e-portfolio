@@ -25,3 +25,9 @@
   }
 }
 
+@layer utilities {
+  .img-shadow {
+      filter: drop-shadow(-6px 6px 10px rgba(255, 251, 251, 0.966));
+  }
+}
+
