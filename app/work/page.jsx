@@ -1,33 +1,19 @@
-    "use client"
+"use client"
 
 import { motion } from "framer-motion"
 import React, { useState } from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
-import "swiper/css"
-
 import { BsArrowUpRight, BsGithub } from "react-icons/bs"
-
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@radix-ui/react-tooltip"
-
-
 import Link from "next/link";
 import Image from "next/image";
 import WorkSliderBtns from "../../components/WorkSliderBtns"
+import "swiper/css"
 
 
 const projects = [
     {
         num: '01',
-        category: 'Classic Snake Game',
-        title: 'Snake Game',
-        description: 'A simple classic snake game where players control a growing snake, guiding it to eat food while avoiding walls and its own tail. The snake speeds up as it eats more, and the goal is to survive as long as possible while achieving a high score.',
-        stack: [{ name: "Html 5" }, { name: "Javascript" }, { name: "Css 3" }],
-        image: '/assets/work/project_image_1.png',
-        live: 'https://f-taveras.github.io/ClassicSnakeGame',
-        github: 'https://github.com/f-taveras/ClassicSnakeGame',
-    },
-    {
-        num: '02',
         category: 'Full stack app',
         title: 'Restaurant App',
         description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui.',
@@ -35,6 +21,16 @@ const projects = [
         image: '/assets/work/restaurant.png',
         live: 'https://restaurant.prtflio.info/',
         github: 'https://github.com/f-taveras/restaurant-app',
+    },
+    {
+        num: '02',
+        category: 'Classic Snake Game',
+        title: 'Snake Game',
+        description: 'A simple classic snake game where players control a growing snake, guiding it to eat food while avoiding walls and its own tail. The snake speeds up as it eats more, and the goal is to survive as long as possible while achieving a high score.',
+        stack: [{ name: "Html 5" }, { name: "Javascript" }, { name: "Css 3" }],
+        image: '/assets/work/project_image_1.png',
+        live: 'https://f-taveras.github.io/ClassicSnakeGame',
+        github: 'https://github.com/f-taveras/ClassicSnakeGame',
     },
     {
         num: '03',
