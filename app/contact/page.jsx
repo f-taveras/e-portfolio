@@ -123,7 +123,7 @@ const Contact = () => {
                             <Textarea onChange={(e) => setMessage(e.target.value)} className="h-[200px]"
                             placeholder="Type your message here" />
 
-                            <Button size="md" className="max-w-40" onSubmit={handleSubmit}>Send Message</Button>
+                            <Button size="md" className="max-w-40" type="submit" onSubmit={handleSubmit}>Send Message</Button>
                              </form>
 
                     </div>
