@@ -11,10 +11,10 @@ export default function handler(req, res) {
     const transporter = nodemailer.createTransport({
       host: 'smtp.mailgun.org',
       port: 587,
-      secure: true, // use false for STARTTLS; true for SSL on port 465
+      secure: false, // use false for STARTTLS; true for SSL on port 465
       auth: {
-        user: 'postmaster@sandbox4893267c00ed4faa81fc8e41eb4cafdb.mailgun.org',
-        pass: "935c194c10e1177eb8da5a123b77f637-d010bdaf-6d11be9e",
+        user: 'postmaster@email.prtflio.info',
+        pass: "abc61ba58d1b27059234fa11fc89eec3-d010bdaf-68f9805c",
       }
     });
     
