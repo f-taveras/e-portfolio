@@ -18,7 +18,6 @@ import {
 } from "../../components/ui/select"
 
 
-
 const MyInfo = [
     {
         icon: <SiLinkedin />,
@@ -37,7 +36,6 @@ const MyInfo = [
     },
 ]
 
-
 const Contact = () => {
 
     const [name, setName] = useState("")
@@ -46,11 +44,10 @@ const Contact = () => {
     const [message, setMessage] = useState("")
     const [phone, setPhone] = useState("")
     const [service, setService] = useState("")
-
+    const [status, setStatus] = useState(null)
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        // console.log(name, email, message, phone, service)
         try {
             const res = await fetch('/api/contactApi', {
                 method: 'POST',
@@ -66,34 +63,38 @@ const Contact = () => {
                     'Content-Type': 'application/json'
                 },
             })
- 
-    } catch (error) {
-        console.log(error)
-    }}
-
+            if (res.ok) {
+                setStatus('success')
+            } else {
+                setStatus('error')
+            }
+        } catch (error) {
+            console.log(error)
+            setStatus('error')
+        }
+    }
 
     return (
-        
         <motion.section
-        initial= {{ opacity: 0 }}
-        animate= {{ 
-            opacity: 1, 
-            transition: {
-                delay: 2.4,
-                duration: 0.4,
-                ease: "easeIn"
-            },
-        }}
-        className="py-6"
+            initial= {{ opacity: 0 }}
+            animate= {{ 
+                opacity: 1, 
+                transition: {
+                    delay: 2.4,
+                    duration: 0.4,
+                    ease: "easeIn"
+                },
+            }}
+            className="py-6"
         >
-
             <div className="container mx-auto">
                 <div className="flex flex-col xl:flex-row gap-[30px]">
                     <div className="xl:w-[54%] order-2 xl:order-none">
-                        <form onSubmit={handleSubmit} className="flex flex-col gap-6 p-10 bg-[#227272c] rounded-xl"> 
+                        <form onSubmit={handleSubmit} className="flex flex-col gap-6 p-10 bg-[#227272c] rounded-xl">
                             <h3 className="text-4xl text-center text-accent">Let's work together</h3>
                             <p className="text-white/60 text-center">
-                            Have a project in mind? Want to chat about your ideas? I'd love to hear from you! Whether you need help with web development, Automation, or anything in between, feel free to reach out. I'll get back to you as soon as possible! </p>
+                            Have a project in mind? Want to chat about your ideas? I'd love to hear from you! Whether you need help with web development, Automation, or anything in between, feel free to reach out. I'll get back to you as soon as possible!
+                            </p>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <Input onChange={(e) => setName(e.target.value)} value={name} type="text" placeholder=" Firstname" />
@@ -102,33 +103,30 @@ const Contact = () => {
                                 <Input onChange={(e) => setPhone(e.target.value)} value={phone} type="phonenumber" placeholder=" Phone Number" />
                             </div>
 
-                            <Select>
-                                    <SelectTrigger>
-                                <SelectValue className="w-full" />
+                            <Select onValueChange={(value) => setService(value)}>
+                                <SelectTrigger>
+                                    <SelectValue placeholder="Select a service" />
                                 </SelectTrigger>
                                 <SelectContent>
                                     <SelectGroup>
-
-                                        <SelectLabel onChange={(e) => setService(e.target.value)} value={service}>Select a service</SelectLabel>
-                                        <SelectItem value="est">Web Development</SelectItem>
-                                        <SelectItem value="cst">Another Service</SelectItem>
-                                        <SelectItem value="mst">Another Service</SelectItem>
-                                    
+                                        <SelectLabel>Select a service</SelectLabel>
+                                        <SelectItem value="web-development">Web Development</SelectItem>
+                                        <SelectItem value="automation">Automation</SelectItem>
+                                        <SelectItem value="other-service">Other Service</SelectItem>
                                     </SelectGroup>
                                 </SelectContent>
-
-                                
                             </Select>
 
-                            <Textarea onChange={(e) => setMessage(e.target.value)} className="h-[200px]"
-                            placeholder="Type your message here" />
+                            <Textarea onChange={(e) => setMessage(e.target.value)} className="h-[200px]" placeholder="Type your message here" />
 
-                            <Button size="md" className="max-w-40" type="submit" onSubmit={handleSubmit}>Send Message</Button>
-                             </form>
+                            <Button size="md" className="max-w-40" type="submit">Send Message</Button>
 
+                            {status === 'success' && <p className="text-green-500">Message sent successfully!</p>}
+                            {status === 'error' && <p className="text-red-500">Failed to send message. Please try again.</p>}
+                        </form>
                     </div>
+                    
                     <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">
-                        
                         <ul className="flex flex-col gap-10">
                             {MyInfo.map((item,index) => {
                                 return (
@@ -145,12 +143,8 @@ const Contact = () => {
                             })}
                         </ul>
                     </div>
-
                 </div>
-
             </div>
-
-
         </motion.section>
     )
 };
