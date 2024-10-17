@@ -49,7 +49,7 @@ const Contact = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            const res = await fetch('/api/contactApi', {
+            const res = await fetch('https://www.prtflio.info/api/contactApi', {
                 method: 'POST',
                 body: JSON.stringify({
                     name,
