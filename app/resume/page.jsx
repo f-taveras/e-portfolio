@@ -147,7 +147,6 @@ const Resume = () => {
                                         })}
                                     </ul>
 
-
                                 </ScrollArea>
                             </div>
                         </TabsContent>
@@ -175,7 +174,9 @@ const Resume = () => {
                                                         <p className='text-white/60'>{item.degree}</p>
                                                     </div>
 
-                                                </li>)
+                                                </li>
+
+                                            )
                                         })}
                                     </ul>
 
@@ -186,7 +187,7 @@ const Resume = () => {
 
                         {/* Skills section */}
 
-                        <TabsContent value='skills'>
+                        <TabsContent value='skills' className='lg:max-w-[1000px]'>
                             <SkillCarousel />
                         </TabsContent>
 
@@ -203,7 +204,6 @@ const Resume = () => {
                                                 key={index}
                                                 className='flex items-center xl:justify-start gap-4'
                                             >
-
                                                 <span className='text-white/60'>{item.fieldName}</span>
                                                 <span className='text-xl'>{item.fieldValue}</span>
 
@@ -212,13 +212,10 @@ const Resume = () => {
                                     })}
                                 </ul>
                             </div>
-
                         </TabsContent>
                     </div>
-
                 </Tabs>
             </div>
-
         </motion.div>
     )
 };
