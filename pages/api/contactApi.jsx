@@ -10,7 +10,7 @@ export default function handler(req, res) {
   const mailContent = `Name: ${name} ${lastname}\nEmail: ${email}\nPhone: ${phone}\nService: ${service}\nMessage: ${message}`
 
   console.log(req.body)
-  res.status(200).json({ message: 'Hello from Next.js!' })
+  // res.status(200).json({ message: 'Hello from Next.js!' })
 
 
   // Create a transporter object
