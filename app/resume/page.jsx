@@ -27,7 +27,7 @@ const about = {
         },
         {
             fieldName: "Currently like",
-            fieldValue: "Automation"
+            fieldValue: "Computer Vision, AI, and Web Development"
         },
         {
             fieldName: "Languages",
@@ -43,6 +43,11 @@ const experience = {
     description: 'I have experience with React, Next.js, Django, Python3 and TailwindCSS. I am passionate about creating beautiful, responsive, and accessible Code',
     items: [
         {
+            company: 'TAVERN Quest',
+            position: "Full-Stack Developer",
+            duration: '2023 - Present',
+        },
+        {
             company: 'Ultimate Technologies Group',
             position: "AV/IT Specialist",
             duration: '2021 - Present',
@@ -51,11 +56,6 @@ const experience = {
             company: 'Indeed',
             position: "AV Coordinator",
             duration: '2019-2022',
-        },
-        {
-            company: 'Bronx Community College',
-            position: "A/V Associate",
-            duration: '2017-2019',
         },
         {
             company: 'US Army',
