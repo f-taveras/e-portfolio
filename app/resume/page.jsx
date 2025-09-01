@@ -19,7 +19,7 @@ const about = {
         },
         {
             fieldName: "Experience",
-            fieldValue: "Junior"
+            fieldValue: "Mid-Level"
         },
         {
             fieldName: "Freelance",
@@ -27,7 +27,7 @@ const about = {
         },
         {
             fieldName: "Currently like",
-            fieldValue: "Computer Vision, AI, and Web Development"
+            fieldValue: "Computer Vision, AI"
         },
         {
             fieldName: "Languages",

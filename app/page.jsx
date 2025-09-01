@@ -1,10 +1,8 @@
 import { Button } from '../components/ui/button';
 import { FiDownload } from 'react-icons/fi';
-
-
-import Stats from '../components/Stats';
 import Social from '../components/Social';
 import Photo from '../components/Photo';
+import SkillCarousel from '@/components/SkillCarousel';
 
 
 const Home = () => {
@@ -21,7 +19,7 @@ const Home = () => {
 
           {/* btn and social media */}
           <div className='flex flex-col xl:flex-row items-center gap-8'>
-            <a href="/assets/cv.pdf" download="felix_taveras_resume.pdf">
+            <a href="/assets/cv.docx" download="felix_taveras_resume.docx">
               <Button
                 variant="outline"
                 size="lg"
@@ -42,8 +40,8 @@ const Home = () => {
         </div>
 
       </div>
+      <SkillCarousel showHeader={false} />
     </div>
-    <Stats />
   </section>
 }
 
