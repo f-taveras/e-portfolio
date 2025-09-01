@@ -34,14 +34,19 @@ const projects = [
     },
     {
         num: '03',
-        category: 'API Development',
-        title: 'Project 3',
-        description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui.',
-        stack: [{ name: "Html 5" }, { name: "Javascript" }, { name: "Css 3" }],
-        image: '/assets/work/project_image_default.png',
-        live: '',
-        github: '',
+        category: 'Self-Hosted Universe',
+        title: 'Milkyway Server',
+        description: 'Welcome to my “Milkyway” — a self-hosted home server where I deploy experiments, projects, and tools. From automation workflows to web apps, it’s a playground for my tech ideas. Take a peek and explore what’s running behind the scenes!',
+        stack: [
+            { name: "Linux" },
+            { name: "Docker Compose"},
+            { name: "n8n"}
+        ],
+        image: '/assets/universe.jpg',
+        live: 'https://milkyway.fit',
+        github: 'https://github.com/f-taveras/server-welcome',
     },
+
     {
         num: '04',
         category: 'Web Development',
@@ -73,8 +78,6 @@ const Work = () => {
 
 
     }
-
-
 
     return (
         <motion.section
