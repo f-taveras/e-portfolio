@@ -5,6 +5,7 @@ import { FiDownload } from 'react-icons/fi';
 import Stats from '../components/Stats';
 import Social from '../components/Social';
 import Photo from '../components/Photo';
+import SkillCarousel from '@/components/SkillCarousel';
 
 
 const Home = () => {
@@ -42,8 +43,8 @@ const Home = () => {
         </div>
 
       </div>
+      <SkillCarousel showHeader={false} />
     </div>
-    <Stats />
   </section>
 }
 
